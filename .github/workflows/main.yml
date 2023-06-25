@@ -11,7 +11,7 @@ jobs:
       - run: npm i && 
              npm run build && 
              curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=v8&source=github" | tar -zx && 
-             mv cf8 /user/local/bin && 
+             mv cf8 /home/runner/work/cpapp/cpapp/.cpapp_mta_build_tmp && 
              sudo curl -o /usr/share/bash-completion/completions/cf8 https://raw.githubusercontent.com/cloudfoundry/cli-ci/master/ci/installers/completion/cf8 &&              
              cf login -a https://api.cf.us10-001.hana.ondemand.com/ -u sanjoy0308@gmail.com -o 4c7f24b5trial -s dev -p ${{ secrets.BTP_PASSWORD }} && 
              npm run deploy 
