@@ -12,7 +12,7 @@
         "hdb": "^0.19.5",
         "mbt": "^1.2.23",
         "passport": "^0.6.0",
-        "curl": "^0.1.4"
+        "wget": "^0.0.1"
     },
     "devDependencies": {
         "@sap/ux-specification": "^1.108.7",
