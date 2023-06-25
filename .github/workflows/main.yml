@@ -9,9 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: npm i && npm run build
-  deploy:
-    needs: build
+  install_cf_CLI_v8:    
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - run: npm i && npm run build
+    steps:      
+      - run: wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+             echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
