@@ -10,9 +10,5 @@ jobs:
       - uses: actions/build@v0
       - run: npm i && npm run build
       - uses: actions/deploy@v0
-      - run: cf login -a https://api.cf.us10-001.hana.ondemand.com/ -u sanjoy0308@gmail.com -o 4c7f24b5trial -s dev && npm run deploy
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          btpkey: '${{ secrets.BTP_PASSWORD }}'
-          channelId: live
-          projectId: cpapp
+      - run: cf login -a https://api.cf.us10-001.hana.ondemand.com/ -u sanjoy0308@gmail.com -o 4c7f24b5trial -s dev -p ${{ secrets.BTP_PASSWORD }} && npm run deploy
+        
