@@ -1,0 +1,11 @@
+name: Deploy to SAP BTP on merge
+'on':
+  push:
+    branches: 
+      - main
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: npm ci && npm run build
