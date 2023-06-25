@@ -8,17 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12
-    - name: Install MTA Build Tool
-      run: npm install -g mbt
-    # Do not generate package-lock.json
-    # See https://blogs.sap.com/2020/07/07/escaping-eintegrity-hell/
-    - name: Disable package-lock.json
-      run: npm config set package-lock false
+    - uses: actions/checkout@v2        
     - name: Build MTA
       run: npm i && npm run build
     - name: Upload Artifact
