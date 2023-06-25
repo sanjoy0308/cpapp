@@ -10,8 +10,7 @@ jobs:
       - uses: actions/checkout@v1
       - run: npm i && 
              npm run build && 
-             wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-             echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list && 
+             wget --no-check-certificate -v -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add - echo "deb https://cf-cli-debian-repo.s3.amazonaws.com stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list && 
              sudo apt-get update && 
              sudo apt-get --allow-unauthenticated install cf-cli &&              
              cf login -a https://api.cf.us10-001.hana.ondemand.com/ -u sanjoy0308@gmail.com -o 4c7f24b5trial -s dev -p ${{ secrets.BTP_PASSWORD }} && 
