@@ -26,6 +26,8 @@ jobs:
          with:
            name: mta
            path: ./
+       - name: Install CAP CDS
+         run: npm install -g @sap/cds
        - name: Deploy to Cloud Foundry
          uses: guerric-p/cf-cli-action@master
          with:
