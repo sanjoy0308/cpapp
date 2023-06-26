@@ -24,6 +24,7 @@
     },
     "scripts": {
         "start": "cds run",
+        "cleanup": "rm -rf node_modules && rm -rf */node_modules && rm -rf */*/node_modules && rm -rf package-lock.json && rm -rf */package-lock.json && rm -rf */*/package-lock.json",
         "watch-risks": "cds watch --open risks/webapp/index.html?sap-ui-xx-viewCache=false",
         "watch-mitigations": "cds watch --open mitigations/webapp/index.html?sap-ui-xx-viewCache=false",
         "undeploy": "cf undeploy cpapp --delete-services --delete-service-keys --delete-service-brokers",
