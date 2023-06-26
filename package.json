@@ -6,7 +6,7 @@
     "license": "UNLICENSED",
     "private": true,
     "dependencies": {
-        "@sap/cds": ">=6.0",
+        "@sap/cds": "^7.0.0",
         "@sap/xssec": "^3.2.17",
         "express": "^4.18.2",
         "hdb": "^0.19.5",
@@ -23,7 +23,7 @@
         "node": ">=16"
     },
     "scripts": {
-        "start": "cds run",
+        "start": "npm rebuild && cds run",
         "cleanup": "rm -rf node_modules && rm -rf */node_modules && rm -rf */*/node_modules && rm -rf package-lock.json && rm -rf */package-lock.json && rm -rf */*/package-lock.json",
         "watch-risks": "cds watch --open risks/webapp/index.html?sap-ui-xx-viewCache=false",
         "watch-mitigations": "cds watch --open mitigations/webapp/index.html?sap-ui-xx-viewCache=false",
