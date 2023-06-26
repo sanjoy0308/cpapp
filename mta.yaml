@@ -152,4 +152,4 @@ build-parameters:
     - npm run cleanup
     - npm cache verify
     - npm install --production
-    - npx -p @sap/cds-dk cds build --production
+    - npx -p @sap/cds cds build --production
