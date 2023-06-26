@@ -17,7 +17,6 @@
     "devDependencies": {
         "@sap/ux-specification": "^1.108.7",
         "rimraf": "^5.0.1",
-        "@sap/cds-dk": "^7.0.0",
         "sqlite3": "^5.1.6"
     },
     "engines": {
