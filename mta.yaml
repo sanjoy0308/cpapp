@@ -149,6 +149,7 @@ build-parameters:
   before-all:
   - builder: custom
     commands:
+    - npm run cleanup
+    - npm cache verify
     - npm install --production
     - npx -p @sap/cds cds build --production
-    - npx rimraf gen/db/src/gen/data
