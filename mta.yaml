@@ -150,5 +150,5 @@ build-parameters:
   - builder: custom
     commands:
     - npm install --production
-    - npx -p @sap/cds-dk cds build --production
+    - npx -p @sap/cds cds build --production
     - npx rimraf gen/db/src/gen/data
