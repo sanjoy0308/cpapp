@@ -8,11 +8,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2        
+    - uses: actions/checkout@v2    
+    - name: install mbt MTA
+      run: npm i mbt    
     - name: Build MTA
       run: npm i && npm run build
-    - name: install mbt MTA
-      run: npm i mbt
     - name: Upload Artifact
       uses: actions/upload-artifact@master
       with:
